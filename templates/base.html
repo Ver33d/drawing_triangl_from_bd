@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<style>
+.slider {
+    -webkit-appearance: none;
+    width: 150px;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+.text-style{
+    border: 2px
+    solid: #555;
+    box-shadow:3px 3px 5px #999;
+    width: 200px;
+    margin:20px;
+    padding:20px;
+}
+
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>График со стрелочками, направленным в сторону мировой системы координат</title>
+</head>
+<body>
+<div class="text-style"><font face="Times New Roman"> Измените толщину стрелки</font></div>
+<form action="" method="post">
+    <div class="slidecontainer">
+        <input type="range" min="1" max="10" value="1" step="" class="slider" id="size" name="width_change">
+        <input type="submit" class="b1" value="Применить">
+    </div>
+</form>
+</div>
+
+<center>
+
+    <img  src="data:image/png;base64, {{ plot_url }}" name ="pixelss">
+
+</center>
+</body>
+</html>
